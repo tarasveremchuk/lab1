@@ -83,7 +83,6 @@ header {
     color: var(--main-color);
 }
 
-/* Іконки та кнопка */
 .header-icons {
     display: flex;
     align-items: center;
@@ -168,21 +167,21 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap; /* Дозволяє переносити елементи на новий ряд */
+    flex-wrap: wrap; 
     padding: 20px;
-    margin-top: 245px; /* Враховує висоту фіксованого хедера */
+    margin-top: 245px; 
     gap: 20px;
 }
 
 .info-background {
-    flex: 1; /* Розтягується, займаючи доступний простір */
+    flex: 1; 
     background-image: url('img/Group\ 327.png');
     background-size: cover;
     background-position: center;
     padding: 40px;
     color: white;
     border-radius: 10px;
-    min-width: 320px; /* Запобігає надто малим розмірам */
+    min-width: 320px; 
 }
 
 .info-content {
@@ -190,7 +189,7 @@ header {
 }
 
 .info-title-block {
-    font-size: 4vw; /* Адаптивний розмір */
+    font-size: 4vw;
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -202,7 +201,7 @@ header {
 
 .search-container {
     display: flex;
-    flex-wrap: wrap; /* Поле + кнопка можуть переходити на новий ряд */
+    flex-wrap: wrap; 
     gap: 10px;
     width: 100%;
 }
@@ -248,29 +247,29 @@ header {
 
 
 .info-title {
-    font-size: 36px;  /* Це розмір шрифту для всього заголовка */
-    font-weight: bold;  /* Заголовок буде жирним */
-    line-height: 1.5;  /* Міжрядковий інтервал */
+    font-size: 36px;  
+    font-weight: bold; 
+    line-height: 1.5;  
 }
 
 .smart {
-    color: #FFA500;  /* Помаранчевий колір для "Smart" */
+    color: #FFA500; 
 }
 
 .future {
-    color: #FFA500;  /* Помаранчевий колір для "Future" */
+    color: #FFA500;  
 }
 
 .info-title span {
-    display: inline-block;  /* Робимо кожне слово окремим елементом */
+    display: inline-block;  
 }
 
 .info-title .smart {
-    margin-right: 10px;  /* Відступ між "Smart" та "Choice" */
+    margin-right: 10px; 
 }
 
 .info-title .future {
-    margin-left: 10px;  /* Відступ між "For" та "Future" */
+    margin-left: 10px;  
 }
 
 .info-image {
@@ -316,22 +315,22 @@ header {
 
 .image-text-block {
     display: grid;
-    grid-template-columns: 30% 70%; /* Фото 30% ширини, текст 70% */
+    grid-template-columns: 30% 70%; 
     align-items: center;
     gap: 5%;
 }
 
 .image-text-block img {
-    width: 100%; /* Фото займає 100% від свого колонки */
+    width: 100%; 
     height: auto;
     border-radius: 10px;
 }
 
 .image-text {
-    font-size: 3vw; /* Текст по ширині екрану */
-    color: rgba(255, 255, 255, 0.5); /* Прозорий білий текст */
+    font-size: 3vw; 
+    color: rgba(255, 255, 255, 0.5); 
     text-align: left;
-    max-width: 80%; /* Обмеження ширини тексту в відсотках */
+    max-width: 80%; 
 }
 
 
@@ -339,7 +338,6 @@ header {
 
 
 
-/* Робимо, щоб секція курсів була нижче попереднього блоку */
 .image-container {
     position: relative;
     display: block;
@@ -390,9 +388,9 @@ header {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     padding: 5%;
     text-align: left;
-    position: relative; /* Позиціюємо кнопку відносно цього контейнера */
-    overflow: visible; /* Дозволяє кнопці виходити за межі */
-    padding-bottom: 50px; /* Місце для кнопки */
+    position: relative; 
+    overflow: visible; 
+    padding-bottom: 50px; 
 }
 
 
@@ -407,7 +405,6 @@ header {
     border-radius: 5%;
 }
 
-/* Категорія + рейтинг */
 .course-info {
     display: flex;
     justify-content: space-between;
@@ -425,24 +422,21 @@ header {
 
 
 .rating img {
-    width: 100%; /* Розмір зірок */
+    width: 100%; 
     height: auto;
 }
 
-/* Назва курсу */
 .course h3 {
     margin: 5% 0;
     font-size: 1.8vw;
 }
 
-/* Ціна */
 .price {
     font-size: 1.5vw;
     font-weight: bold;
     color: #e67e22;
 }
 
-/* Блок з інформацією (час, відео, продажі) */
 .details {
     display: flex;
     justify-content: space-between;
@@ -461,42 +455,39 @@ header {
 }
 
 .join-btn {
-    background: #e67e22; /* Оранжевий колір */
+    background: #e67e22; 
     color: white;
     border: none;
     padding: 12px 25px;
     font-size: 1.2vw;
     font-weight: bold;
-    border-radius: 50px; /* Закруглені краї */
+    border-radius: 50px; 
     cursor: pointer;
     transition: background 0.3s, transform 0.2s;
 
-    /* Закріплення кнопки за межами картки */
     position: absolute;
-    bottom: -20px; /* Виступає вниз */
+    bottom: -20px; 
     left: 50%;
     transform: translateX(-50%);
 }
 
-/* Ефект при наведенні */
 .join-btn:hover {
     background: #d35400;
-    transform: translateX(-50%) scale(1.1); /* Трохи збільшується при наведенні */
+    transform: translateX(-50%) scale(1.1); 
 }
 footer {
-    background-image: url('img/Rectangle\ 3.png'); /* Вказуємо шлях до вашого зображення */
-    background-size: cover; /* Зображення покриває весь простір */
-    background-position: center; /* Центрує зображення */
-    width: 100%; /* Футер займає всю ширину сторінки */
-    padding: 40px 5%; /* Відстань зліва і справа 5% */
+    background-image: url('img/Rectangle\ 3.png'); 
+    background-size: cover; 
+    background-position: center; 
+    padding: 40px 5%; 
     font-family: Arial, sans-serif;
-    color: black; /* Колір тексту чорний */
+    color: black; 
     position: relative;
 }
 
 .footer-container {
-    width: 90%; /* Встановлюємо ширину контейнера футера на 90% */
-    margin: 0 auto; /* Центруємо контейнер */
+    width: 90%;
+    margin: 0 auto; 
     text-align: left;
 }
 
@@ -507,12 +498,12 @@ footer {
 .about h4 {
     font-size: 24px;
     font-weight: bold;
-    color: black; /* Колір заголовка чорний */
+    color: black; 
 }
 
 .about p {
     font-size: 19px;
-    color: #333; /* Світліший чорний колір для тексту */
+    color: #333; 
     line-height: 1.5;
 }
 
@@ -524,13 +515,13 @@ footer {
 }
 
 .column {
-    width: 100%; /* Ширина кожної колонки 100% */
+    width: 100%; 
 }
 
 .column h4 {
     font-size: 24px;
     font-weight: bold;
-    color: black; /* Колір заголовка чорний */
+    color: black; 
     margin-bottom: 10px;
 }
 
@@ -542,13 +533,13 @@ footer {
 
 .column li {
     font-size: 19px;
-    color: #333; /* Світліший чорний колір для тексту */
+    color: #333; 
     margin-bottom: 10px;
     cursor: pointer;
 }
 
 .column li:hover {
-    color: #000; /* Зміна кольору при наведенні */
+    color: #000; 
 }
 
 
@@ -556,19 +547,22 @@ footer {
 .footer-bottom p {
     text-align: center;
     font-size: 14px;
-    color: #333; /* Чорний колір тексту */
+    color: #333; 
     margin: 10px 0;
 }
 
-/* Адаптивність для мобільних */
+
 @media (max-width: 768px) {
     .courses {
         grid-template-columns: 1fr;
+        margin-bottom: 140px; /* Створює простір між останнім курсом і футером */
+
     }
 
     .course-section h2 {
         font-size: 4vw;
     }
+   
 
     .intro-text {
         font-size: 2.5vw;
@@ -644,11 +638,11 @@ footer {
         align-items: center;
         gap: 1rem;
         padding: 1rem 0;
-        display: none; /* Ховаємо меню за замовчуванням */
+        display: none; 
     }
 
     .navbar.active {
-        display: flex; /* Показуємо меню, коли воно активне */
+        display: flex;
     }
 
     .menu-toggle {
@@ -678,7 +672,7 @@ footer {
 }
 @media (max-width: 1024px) {
     .info-block {
-        flex-direction: column; /* Елементи в один стовпчик */
+        flex-direction: column; 
         align-items: center;
         text-align: center;
     }
@@ -727,3 +721,5 @@ footer {
         margin-bottom: 20px;
     }
 }
+
+
