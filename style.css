@@ -857,7 +857,6 @@ button:hover {
 @media (max-width: 480px) {
     header {
         height: 6rem;
-        padding: 0 2%;
     }
     .logo img {
         height: 2.5rem;
