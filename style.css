@@ -911,6 +911,30 @@ button:hover {
     
 
 }
+@media (max-width: 480px) {
+    .modal-content {
+        width: 90%; /* Робить модальне вікно ширшим на малих екранах */
+        padding: 20px; /* Додає простору всередині */
+    }
+
+    .modal-content h2 {
+        font-size: 20px; /* Зменшує заголовок */
+    }
+
+    .modal-content input {
+        font-size: 14px; /* Зменшує поля вводу */
+        padding: 8px; /* Зменшує відступи */
+    }
+
+    .modal-content button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .modal-content p {
+        font-size: 12px;
+    }
+}
 
 
 .modal2 {
