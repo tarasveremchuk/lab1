@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Інформація про курс</title>
+<link rel="stylesheet" href="style.css"></head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="Logo">
+            <span class="company-name">Coursera</span>
+        </a>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Головна</a></li>
+                <li><a href="info.html">Про нас</a></li>
+                <li><a href="#courses">Курси</a></li>
+                <li><a href="#" id="schedule-btn">Розклад</a></li>
+                <li><a href="#footer">Контакти</a></li>
+            </ul>
+        </nav>
+        
+        <div class="header-icons">
+            <button class="sign-in-btn">Вхід</button>
+            <div class="menu-toggle">&#9776;</div>
+        </div>        
+    </header>
+
+    <main class="course-container2">
+        <h1 id="course-title"></h1>
+        <p id="course-description"></p>
+
+        <div class="course-videos">
+            <h2>Відео-уроки</h2>
+            <div id="video-list"></div>
+        </div>
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer-container">
+          <div class="subscribe-card">
+            <h3>Підпишись на Нашу Розсилку</h3>
+            <p>Отримуй останні новини та ексклюзивні пропозиції.</p>
+            <input type="email" placeholder="Введи свій EMAIL" class="email-input">
+            <button class="subscribe-button">Підписатись</button>
+            <p class="terms-text">Натискаючи "підписатися", ви погоджуєтеся з нашими <a href="terms.html" style="text-decoration: underline;">умовами використання</a>.</p>
+        </div>
+      
+          <!-- Інформаційні колонки -->
+          <div class="info-section">
+            <div class="info-columns">
+              <div>
+                <h4>Company</h4>
+                <ul>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Careers</a></li>
+                  <li><a href="#">Press</a></li>
+                </ul>
+              </div>
+              <div>
+                <h4>Info</h4>
+                <ul>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Pricing</a></li>
+                  <li><a href="#">Partners</a></li>
+                </ul>
+              </div>
+              <div>
+                <h4>Help</h4>
+                <ul>
+                  <li><a href="#">Support</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">FAQs</a></li>
+                </ul>
+              </div>
+            </div>
+      
+            <!-- Соцмережі, Лого та політики -->
+            <div class="footer-bottom">
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/"><i class='bx bxl-instagram' ></i></a>
+                    <a href="https://www.tiktok.com/"><i class='bx bxl-tiktok' ></i></a>
+                    <a href="https://www.youtube.com/"><i class='bx bxl-youtube'></i></a>
+                  </div>
+                  <div class="footer-bottom-content">
+                    <div class="footer-left">
+                      <img src="img/logo.png" alt="Company Logo" class="footer-logo">
+                    </div>
+                    <div class="footer-right">
+                        <div class="policy-text">
+                            <a href='privacy.html' style="text-decoration: underline;">Політика конфіденційності</a> | 
+                            <a href='terms.html' style="text-decoration: underline;">Умови використання</a><br>
+                            Ваші дані є важливими для нас, і ми прагнемо забезпечити максимальний рівень їх безпеки під час використання наших курсів.
+                            Наші курси призначені лише для осіб віком від 18 років.
+                            Всі матеріали, що надаються на курсах, є власністю Courslab Inc. і не можуть бути використані без дозволу.<br>
+                            &copy; 2025 Courslab Inc. 340 S Lemon Ave #7499, Walnut, CA 91789
+                        </div>
+                        
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <script src="course.js"></script>
+
+</body>
+</html>
