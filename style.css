@@ -658,7 +658,20 @@ header {
     }
 }
 
+@media (max-width: 480px) {
+    .info-columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        text-align: center;
 
+    }
+
+    .info-columns div:last-child {
+        grid-column: span 2;
+        text-align: center;
+    }
+}
 
 
 
