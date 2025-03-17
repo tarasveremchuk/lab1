@@ -62,7 +62,6 @@ header {
     align-items: center;
     justify-content: space-between;
     background: #fdf8ee;
-    padding: 0 5%;
     transition: all 0.3s ease;
 }
 
@@ -134,9 +133,7 @@ header {
 
 /* Адаптивність */
 @media (max-width: 1024px) {
-    header {
-        padding: 0 3%;
-    }
+
     .navbar ul {
         gap: 0.1rem;
     }
@@ -158,7 +155,6 @@ header {
 @media (max-width: 480px) {
     header {
         height: 6rem;
-        margin: 0 2%;
     }
     .logo img {
         height: 2.5rem;
