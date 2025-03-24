@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Інформація про курс</title>
+<link rel="stylesheet" href="style.css"></head>
+<body class="body-course">
+  <script src="script.js"></script>
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="Logo">
+            <span class="company-name">Coursera</span>
+        </a>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="info.html#">Про нас</a></li>
+                <li><a href="index.html#courses">Курси</a></li>
+                <li><a href="#" id="schedule-btn">Розклад</a></li>
+                <li><a href="index.html#footer">Контакти</a></li>
+            </ul>
+        </nav>
+        
+        <div class="header-icons">
+            <button class="sign-in-btn">Вхід</button>
+            <div class="menu-toggle">&#9776;</div>
+          </div>        
+    </header>
+
+    <main class="course-container">
+      <!-- Блок заголовку та опису -->
+      <section class="course-info">
+          <h1 class="course-title" id="course-title"></h1>
+          <p class="course-description" id="course-description"></p>
+      </section>
+
+      <!-- Блок відео та прогресу -->
+      <div class="video-progress-wrapper">
+          <!-- Відео -->
+          <section class="video-container">
+              <iframe id="video-frame" allowfullscreen></iframe>
+              <button id="next-video-btn">Наступне відео</button>
+          </section>
+
+          <!-- Шкала прогресу -->
+          <section class="progress-container">
+              <h3>Твій успіх</h3>
+              <svg width="150" height="150" viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="45" stroke="#e0e0e0" stroke-width="10" fill="none"/>
+                  <circle id="progress-ring" cx="50" cy="50" r="45" stroke="green" stroke-width="10" fill="none" 
+                          stroke-dasharray="283" stroke-dashoffset="283" stroke-linecap="round"/>
+                  <text id="progress-text" x="50" y="55" text-anchor="middle" font-size="20" font-weight="bold">0%</text>
+              </svg>
+          </section>
+      </div>
+  </main>
+
+    <footer class="footer">
+
+        <div class="footer-container">
+          <div class="subscribe-card">
+            <h3>Підпишись на Нашу Розсилку</h3>
+            <p>Отримуй останні новини та ексклюзивні пропозиції.</p>
+            <input type="email" placeholder="Введи свій EMAIL" class="email-input">
+            <button class="subscribe-button">Підписатись</button>
+            <p class="terms-text">Натискаючи "підписатися", ви погоджуєтеся з нашими <a href="terms.html" style="text-decoration: underline;">умовами використання</a>.</p>
+        </div>
+      
+          <!-- Інформаційні колонки -->
+          <div class="info-section">
+            <div class="info-columns">
+              <div>
+                <h4>Company</h4>
+                <ul>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Careers</a></li>
+                  <li><a href="#">Press</a></li>
+                </ul>
+              </div>
+              <div>
+                <h4>Info</h4>
+                <ul>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Pricing</a></li>
+                  <li><a href="#">Partners</a></li>
+                </ul>
+              </div>
+              <div>
+                <h4>Help</h4>
+                <ul>
+                  <li><a href="#">Support</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">FAQs</a></li>
+                </ul>
+              </div>
+            </div>
+      
+            <!-- Соцмережі, Лого та політики -->
+            <div class="footer-bottom">
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/"><i class='bx bxl-instagram' ></i></a>
+                    <a href="https://www.tiktok.com/"><i class='bx bxl-tiktok' ></i></a>
+                    <a href="https://www.youtube.com/"><i class='bx bxl-youtube'></i></a>
+                  </div>
+                  <div class="footer-bottom-content">
+                    <div class="footer-left">
+                      <img src="img/logo.png" alt="Company Logo" class="footer-logo">
+                    </div>
+                    <div class="footer-right">
+                        <div class="policy-text">
+                            <a href='privacy.html' style="text-decoration: underline;">Політика конфіденційності</a> | 
+                            <a href='terms.html' style="text-decoration: underline;">Умови використання</a><br>
+                            Ваші дані є важливими для нас, і ми прагнемо забезпечити максимальний рівень їх безпеки під час використання наших курсів.
+                            Наші курси призначені лише для осіб віком від 18 років.
+                            Всі матеріали, що надаються на курсах, є власністю Courslab Inc. і не можуть бути використані без дозволу.<br>
+                            &copy; 2025 Courslab Inc. 340 S Lemon Ave #7499, Walnut, CA 91789
+                        </div>
+                        
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <script src="course.js"></script>
+
+    <div id="auth-modal" class="modal">
+      <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2 id="modal-title">Sign In</h2> 
+          
+          <form id="auth-form">
+              <input type="email" id="email" placeholder="Email" required>
+              <input type="password" id="password" placeholder="Password" required>
+              <button type="submit">Login</button>
+              <p>Don't have an account? <a href="#" id="toggle-signup">Sign Up</a></p>
+          </form>
+  
+          <form id="signup-form" style="display: none;">
+              <input type="text" id="fullname" placeholder="Full Name" required>
+              <input type="email" id="signup-email" placeholder="Email" required>
+              <input type="password" id="signup-password" placeholder="Password" required>
+              <button type="submit">Register</button>
+              <p>Already have an account? <a href="#" id="toggle-login">Sign In</a></p>
+          </form>
+      </div>
+  </div>
+  
+  <div id="schedule-modal" class="modal2">
+      <div class="modal-content2">
+          <span class="close-btn2">&times;</span>
+          <h2>Course Schedule</h2>
+          <div class="schedule-container" id="schedule-body"></div>
+      </div>
+  </div>
+</body>
+</html>
