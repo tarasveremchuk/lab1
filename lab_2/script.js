@@ -168,7 +168,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
 document.addEventListener("DOMContentLoaded", function () {
     const scheduleBtn = document.getElementById("schedule-btn");
     const scheduleModal = document.getElementById("schedule-modal");
@@ -203,9 +202,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const courses = [
-        { name: "Web Development Basics", date: "March 20, 2025 10:00:00", description: "Цей курс допоможе вам освоїти основи веб-розробки, включаючи HTML, CSS та JavaScript, і ще багато цікавих фішок." },
-        { name: "Python for Beginners", date: "March 22, 2025 13:00:00", description: "Навчіться основам програмування на Python, включаючи синтаксис, структури даних та основні алгоритми." },
-        { name: "UI/UX Design", date: "March 25, 2025 15:00:00", description: "Розкрийте секрети ефективного дизайну користувацького інтерфейсу та досвіду користувача." }
+        { name: "Web Development Basics", date: "April 20, 2025 10:00:00", description: "Цей курс допоможе вам освоїти основи веб-розробки, включаючи HTML, CSS та JavaScript, і ще багато цікавих фішок." },
+        { name: "Python for Beginners", date: "April 22, 2025 13:00:00", description: "Навчіться основам програмування на Python, включаючи синтаксис, структури даних та основні алгоритми." },
+        { name: "UI/UX Design", date: "May 25, 2025 15:00:00", description: "Розкрийте секрети ефективного дизайну користувацького інтерфейсу та досвіду користувача." }
     ];
 
     function renderSchedule() {
@@ -235,10 +234,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function updateTimers() {
-        document.querySelectorAll(".timer").forEach((timer, index) => {
-            const timeRemaining = getTimeRemaining(courses[index].date);
-            timer.textContent = `${timeRemaining.days}d ${timeRemaining.hours}h ${timeRemaining.minutes}m ${timeRemaining.seconds}s`;
-        });
+        let index = 0;
+        do {
+            const timer = document.querySelector(`.timer[data-index='${index}']`);
+            if (timer) {
+                const timeRemaining = getTimeRemaining(courses[index].date);
+                timer.textContent = `${timeRemaining.days}d ${timeRemaining.hours}h ${timeRemaining.minutes}m ${timeRemaining.seconds}s`;
+            }
+            index++;
+        } while (index < courses.length);
     }
 
     setInterval(updateTimers, 1000);

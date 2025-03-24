@@ -419,8 +419,7 @@ header {
     width: 90%;
     margin: 0 auto;
     text-align: center;
-    padding: 5% 0;
-    margin-top: 15%;
+    margin-top: 2%;
 }
 
 .course-section h2 {
@@ -439,7 +438,7 @@ header {
 .courses {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3%;
+    gap: 2%;
     width: 80%;
     margin: 0 auto;
 }
@@ -766,7 +765,7 @@ button:hover {
     .courses {
         grid-template-columns: 1fr;
         margin-bottom: 140px; /* Створює простір між останнім курсом і футером */
-
+        gap: 2%;
     }
 
     .course-section h2 {
@@ -816,6 +815,7 @@ button:hover {
     }
     .navbar a {
         font-size: 1.3rem;
+        white-space: nowrap; 
     }
     .sign-in-btn {
         font-size: 1rem;
@@ -832,8 +832,13 @@ button:hover {
     .info-text {
         font-size: 18px;
     }
-
+    .courses {
+        grid-template-columns: 1fr;
+        margin-bottom: 140px; /* Створює простір між останнім курсом і футером */
+        gap: 2%;
+    }
 }
+
 
 
 @media (max-width: 600px) {
@@ -964,7 +969,6 @@ button:hover {
     }
 }
 
-
 .modal2 {
     display: none;
     position: fixed;
@@ -1002,6 +1006,47 @@ button:hover {
     gap: 20px;
     margin-top: 20px;
 }
+
+@media (max-width: 1024px) {
+    .schedule-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки на середніх екранах */
+    }
+}
+
+@media (max-width: 768px) {
+    .schedule-container {
+        grid-template-columns: 1fr; /* 1 колонка на малих екранах */
+    }
+}
+
+.course-card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.course-card:hover {
+    transform: scale(1.05);
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.course-description {
+    font-size: 1rem;
+    color: #555;
+}
+
+.timer {
+    font-weight: bold;
+    color: #e67e22;
+}
+
 
 .course-card {
     background: #fff;
