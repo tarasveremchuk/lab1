@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const courses = {
         "Основи веб-розробки": {
             description: "Цей курс навчить вас основам HTML, CSS та JavaScript.",
-            videos: ["dQw4w9WgXcQ", "eIrMbAQSU34", "M8jFvOTCh28", "3JluqTojuME", "kUMe1FH4CHE", "yfoY53QXEnI", "SgQhwtIoQ7o", "mJgBOIoGihA", "zJSY8tbf_ys", "Qqx_wzMmFeA"]
+            videos: ["HcOc7P5BMi4", "ESnrn1kAD4E", "nGhKIC_7Mkk", "Ez8F0nW6S", "ajdRvxDWH4w", "Zg4-uSjxosE", "UmRtFFSDSFo", "gFWhbjzowrM", "P0XMXqDGttU", "7zcXPCt8Ck0"]
         },
         "Python для початківців": {
             description: "Вивчайте основи Python та створюйте свої перші програми!",
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         "UI/UX Дизайн": {
             description: "Опануйте основи UI/UX дизайну та створюйте круті інтерфейси.",
-            videos: ["ysEN5RaKOlA", "G6Ccf0ulwIg", "D5D1PfI1jP8", "BDx6S5GxBdM", "QMgbiUUosOE", "L1V-kSYm5VQ", "8h9n1MNrshM", "u9GOm3izfGg", "8UCiSP2qWqU", "wdx3U5JM8FY"]
+            videos: ["O5IXf8qB9U4", "FlwYtS4mIQw", "SKvsPh0qdQU", "h9r_UpOzajA", "yhqEqcWMoqs", "L1V-C5h1ZE1AhlI", "gJ6cvzZ0ewQ", "FdJz-rfMPFk", "O9-t0DtoobA", "pYQBvAYnL1I"]
         }
     };
 
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Функція для оновлення прогресу
     function updateProgress() {
-        let progressPercent = ((currentVideoIndex) / videoList.length) * 100; // Початковий прогрес 0%
+        let progressPercent = ((currentVideoIndex) / videoList.length) * 100;
         let dashOffset = 283 - (progressPercent / 100) * 283;
         progressRing.style.strokeDashoffset = dashOffset;
         progressText.textContent = `${Math.round(progressPercent)}%`;
@@ -48,12 +48,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Функція для завершення курсу
     function completeCourse() {
-        // Оновлюємо прогрес на 100%
-        currentVideoIndex = videoList.length; // встановлюємо максимальний індекс відео, тобто завершення курсу
-        updateProgress(); // Оновлюємо прогрес
+        currentVideoIndex = videoList.length; 
+        updateProgress(); 
         localStorage.setItem(`completed_${courseTitle}`, "true");
-        nextVideoBtn.textContent = "Курс завершено"; // Змінюємо текст кнопки
-        nextVideoBtn.disabled = true; // Вимикаємо кнопку
+        nextVideoBtn.textContent = "Курс завершено"; 
+        nextVideoBtn.disabled = true; 
     }
 
     // Показуємо наступне відео, якщо не останнє, інакше кнопку завершення курсу
@@ -63,19 +62,19 @@ document.addEventListener("DOMContentLoaded", function () {
             videoFrame.src = `https://www.youtube.com/embed/${videoList[currentVideoIndex]}`;
             updateProgress();
         } else {
-            completeCourse(); // Якщо це останнє відео, одразу завершуємо курс
+            completeCourse(); 
         }
     }
 
     // Перевірка, чи курс вже завершений, і зміна тексту кнопки
     if (localStorage.getItem(`completed_${courseTitle}`) === "true") {
-        nextVideoBtn.textContent = "Курс завершено"; // Якщо курс завершено, змінюємо текст на "Курс завершено"
+        nextVideoBtn.textContent = "Курс завершено"; 
         nextVideoBtn.disabled = true;
-        updateProgress(); // Оновлюємо прогрес на 100%
+        updateProgress(); 
     } else {
         // Якщо курс не завершений, відображаємо перше відео
         videoFrame.src = `https://www.youtube.com/embed/${videoList[currentVideoIndex]}`;
-        updateProgress(); // Початковий прогрес 0%
+        updateProgress(); 
     }
 
     nextVideoBtn.addEventListener("click", showNextVideo);

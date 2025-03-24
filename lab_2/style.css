@@ -419,7 +419,8 @@ header {
     width: 90%;
     margin: 0 auto;
     text-align: center;
-    margin-top: 2%;
+    padding: 5% 0;
+    margin-top: 15%;
 }
 
 .course-section h2 {
@@ -832,11 +833,7 @@ button:hover {
     .info-text {
         font-size: 18px;
     }
-    .courses {
-        grid-template-columns: 1fr;
-        margin-bottom: 140px; /* Створює простір між останнім курсом і футером */
-        gap: 2%;
-    }
+    
 }
 
 
