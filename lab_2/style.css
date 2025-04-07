@@ -419,8 +419,8 @@ header {
     width: 90%;
     margin: 0 auto;
     text-align: center;
-    padding: 5% 0;
-    margin-top: 15%;
+    padding: 0 0;
+
 }
 
 .course-section h2 {
@@ -1098,6 +1098,7 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 15%;
 }
 
 .pre-footer-content {

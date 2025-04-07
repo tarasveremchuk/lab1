@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const courses = {
         "Основи веб-розробки": {
             description: "Цей курс навчить вас основам HTML, CSS та JavaScript.",
-            videos: ["HcOc7P5BMi4", "ESnrn1kAD4E", "nGhKIC_7Mkk", "Ez8F0nW6S", "ajdRvxDWH4w", "Zg4-uSjxosE", "UmRtFFSDSFo", "gFWhbjzowrM", "P0XMXqDGttU", "7zcXPCt8Ck0"]
+            videos: ["YEmdHbQBCSQ", "ESnrn1kAD4E", "nGhKIC_7Mkk", "Ez8F0nW6S", "ajdRvxDWH4w", "Zg4-uSjxosE", "UmRtFFSDSFo", "gFWhbjzowrM", "P0XMXqDGttU", "7zcXPCt8Ck0"]
         },
         "Python для початківців": {
             description: "Вивчайте основи Python та створюйте свої перші програми!",
